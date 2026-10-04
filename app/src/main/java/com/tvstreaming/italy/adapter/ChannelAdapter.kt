@@ -41,9 +41,8 @@ class ChannelAdapter(
             )
             ivDel.visibility = if (ch.isPreloaded) View.GONE else View.VISIBLE
 
-            v.setOnClickListener { onChannelClick(ch) }
-            ivFav.setOnClickListener { onFavoriteClick(ch) }
-            ivDel.setOnClickListener { onDeleteClick?.invoke(ch) }
+            -            v.setOnClickListener { onChannelClick(ch) }
++            itemView.setOnClickListener { onChannelClick(ch) }
         }
     }
 
